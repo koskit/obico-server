@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build ./backend --file Dockerfile --tag koskit/obico-server:$(date +%s)
+      run: docker build ./backend --file ./backend/Dockerfile --tag koskit/obico-server:$(date +%s)
