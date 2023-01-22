@@ -20,5 +20,6 @@ jobs:
         context: ./backend
         file: ./backend/Dockerfile
         no-cache: true
+        push: koskit/obico-server
     #- name: Build the Docker image
     #  run: docker build ./backend --file ./backend/Dockerfile --tag koskit/obico-server:$(date +%s)
