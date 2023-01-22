@@ -15,16 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build and push Docker images
-      # You may pin to the exact commit or the version.
-      # uses: docker/build-push-action@37abcedcc1da61a57767b7588cb9d03eb57e28b3
       uses: docker/build-push-action@v3.3.0
       with:
-        # List of additional build contexts (e.g., name=path)
-        build-contexts: ./backend
         context: ./backend
-        # Path to the Dockerfile
         file: ./backend/Dockerfile
-        # Do not use cache when building the image
         no-cache: true
-    - name: Build the Docker image
-      run: docker build ./backend --file ./backend/Dockerfile --tag koskit/obico-server:$(date +%s)
+    #- name: Build the Docker image
+    #  run: docker build ./backend --file ./backend/Dockerfile --tag koskit/obico-server:$(date +%s)
